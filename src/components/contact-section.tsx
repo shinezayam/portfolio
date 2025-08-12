@@ -27,17 +27,26 @@ export function ContactSection() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
 
-    console.log("Form submitted:", formData)
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    
-    setTimeout(() => {
-      setIsSubmitted(false)
+      if (!response.ok) {
+        throw new Error('Request failed')
+      }
+
+      setIsSubmitted(true)
       setFormData({ name: "", email: "", message: "" })
-    }, 3000)
+      setTimeout(() => setIsSubmitted(false), 3000)
+    } catch (err) {
+      console.error('Failed to submit contact form', err)
+      // Optionally: show a toast/error state
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const contactInfo = [
