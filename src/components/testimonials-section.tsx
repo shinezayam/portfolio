@@ -4,54 +4,7 @@ import { motion } from "framer-motion"
 import { Star, Quote } from "lucide-react"
 import { useState, useEffect } from "react"
 import { useI18n } from "@/lib/i18n"
-
-const testimonials = [
-  {
-    id: 1,
-    name: "Sarah Johnson",
-    role: "Product Manager",
-    company: "TechCorp",
-    content: "Shinezaya transformed our app&apos;s user experience completely. Her attention to detail and user-centered approach resulted in a 40% increase in user engagement. She&apos;s not just a designer, she&apos;s a problem solver.",
-    rating: 5,
-    avatar: "/api/placeholder/60/60"
-  },
-  {
-    id: 2,
-    name: "Michael Chen",
-    role: "CEO",
-    company: "StartupXYZ",
-    content: "Working with Shinezaya was a game-changer for our startup. Her designs are not only beautiful but also highly functional. She understood our vision perfectly and delivered beyond our expectations.",
-    rating: 5,
-    avatar: "/api/placeholder/60/60"
-  },
-  {
-    id: 3,
-    name: "Emily Rodriguez",
-    role: "Marketing Director",
-    company: "GlobalBrand",
-    content: "Shinezaya&apos;s design work helped us establish a strong brand identity. Her creative solutions and professional approach made the entire process smooth and enjoyable. Highly recommended!",
-    rating: 5,
-    avatar: "/api/placeholder/60/60"
-  },
-  {
-    id: 4,
-    name: "David Kim",
-    role: "CTO",
-    company: "InnovateLab",
-    content: "The dashboard Shinezaya designed for us is intuitive and powerful. Her understanding of both user needs and technical constraints is impressive. She&apos;s definitely our go-to designer for future projects.",
-    rating: 5,
-    avatar: "/api/placeholder/60/60"
-  },
-  {
-    id: 5,
-    name: "Lisa Thompson",
-    role: "UX Lead",
-    company: "DesignStudio",
-    content: "Shinezaya brings a unique perspective to every project. Her designs are innovative yet practical, and she always puts the user first. It&apos;s been a pleasure collaborating with her.",
-    rating: 5,
-    avatar: "/api/placeholder/60/60"
-  }
-]
+import { testimonials as mongolTestimonials } from "@/data/testimonials"
 
 export function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -59,18 +12,18 @@ export function TestimonialsSection() {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length)
+      setCurrentIndex((prev) => (prev + 1) % mongolTestimonials.length)
     }, 5000)
 
     return () => clearInterval(timer)
   }, [])
 
   const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length)
+    setCurrentIndex((prev) => (prev + 1) % mongolTestimonials.length)
   }
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+    setCurrentIndex((prev) => (prev - 1 + mongolTestimonials.length) % mongolTestimonials.length)
   }
 
   const title = t("testimonials.title")
@@ -92,6 +45,7 @@ export function TestimonialsSection() {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             {t("testimonials.subtitle")}
           </p>
+          <p className="mt-2 text-xs text-muted-foreground/70">(Demo content: names and companies are illustrative)</p>
         </motion.div>
 
         {/* Testimonials Carousel */}
@@ -110,27 +64,27 @@ export function TestimonialsSection() {
               </div>
               <div className="flex-1">
                 <div className="flex items-center space-x-1 mb-2">
-                  {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
+                  {[...Array(mongolTestimonials[currentIndex].rating)].map((_, i) => (
                     <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
                 <h4 className="text-xl font-semibold text-foreground">
-                  {testimonials[currentIndex].name}
+                  {mongolTestimonials[currentIndex].name}
                 </h4>
                 <p className="text-muted-foreground">
-                  {testimonials[currentIndex].role} at {testimonials[currentIndex].company}
+                  {mongolTestimonials[currentIndex].role} @ {mongolTestimonials[currentIndex].company}
                 </p>
               </div>
             </div>
             
             <blockquote className="text-lg md:text-xl text-muted-foreground leading-relaxed italic">
-              &ldquo;{testimonials[currentIndex].content}&rdquo;
+              &ldquo;{mongolTestimonials[currentIndex].content}&rdquo;
             </blockquote>
           </motion.div>
 
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-2 mt-8">
-            {testimonials.map((_, index) => (
+            {mongolTestimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
