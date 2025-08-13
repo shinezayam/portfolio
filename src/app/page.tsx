@@ -5,10 +5,16 @@ import { PortfolioSection } from "@/components/portfolio-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
+import { ScrollProgress } from "@/components/scroll-progress"
+import { ScrollToTop } from "@/components/scroll-to-top"
+import { InteractiveBackground } from "@/components/interactive-background"
+import { CursorFollower } from "@/components/cursor-follower"
 
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <InteractiveBackground />
+      <ScrollProgress />
       <Navigation />
       <HeroSection />
       <AboutSection />
@@ -16,6 +22,8 @@ export default function Home() {
       <TestimonialsSection />
       <ContactSection />
       <Footer />
+      <ScrollToTop />
+      <CursorFollower />
     </main>
   )
 }

@@ -23,6 +23,28 @@ export function ContactSection() {
     })
   }
 
+  const fireConfetti = async () => {
+    const mod = await import("canvas-confetti")
+    const confetti = mod.default
+
+    const end = Date.now() + 1200
+    const colors = ["#a78bfa", "#f472b6", "#60a5fa", "#facc15"]
+
+    const frame = () => {
+      confetti({
+        particleCount: 60,
+        startVelocity: 35,
+        spread: 360,
+        ticks: 60,
+        origin: { x: Math.random(), y: Math.random() - 0.2 },
+        colors,
+        zIndex: 9999,
+      })
+      if (Date.now() < end) requestAnimationFrame(frame)
+    }
+    frame()
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
@@ -40,6 +62,7 @@ export function ContactSection() {
 
       setIsSubmitted(true)
       setFormData({ name: "", email: "", message: "" })
+      fireConfetti().catch(() => {})
       setTimeout(() => setIsSubmitted(false), 3000)
     } catch (err) {
       console.error('Failed to submit contact form', err)
@@ -53,19 +76,19 @@ export function ContactSection() {
     {
       icon: Mail,
       titleKey: "contact.info.email",
-      value: "hello@shinezaya.com",
-      href: "mailto:hello@shinezaya.com"
+      value: "shinezayam@gmail.com",
+      href: "mailto:shinezayam@gmail.com"
     },
     {
       icon: Phone,
       titleKey: "contact.info.phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+976 88019223",
+      href: "tel:+97688019223"
     },
     {
       icon: MapPin,
       titleKey: "contact.info.location",
-      value: "San Francisco, CA",
+      value: "Ulaanbaatar, Mongolia",
       href: "#"
     }
   ]
@@ -150,15 +173,32 @@ export function ContactSection() {
             
             {isSubmitted ? (
               <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.96 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="text-center py-12"
+                transition={{ duration: 0.4 }}
+                className="relative overflow-hidden rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 to-secondary/5 p-10 text-center shadow-xl"
               >
-                <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
-                <h4 className="text-xl font-semibold mb-2">{t("contact.form.sent.title")}</h4>
-                <p className="text-muted-foreground">
+                <div className="pointer-events-none absolute -inset-16 opacity-30 blur-3xl bg-gradient-to-tr from-primary/20 to-secondary/20" />
+
+                <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.05 }} className="relative mx-auto mb-6 grid place-items-center">
+                  <div className="absolute h-20 w-20 rounded-full bg-green-400/20 animate-ping" />
+                  <div className="relative flex h-20 w-20 items-center justify-center rounded-full border border-green-400/40 bg-gradient-to-br from-green-400/20 to-emerald-500/20">
+                    <CheckCircle className="h-10 w-10 text-green-500" />
+                  </div>
+                </motion.div>
+
+                <h4 className="text-2xl font-semibold mb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                  {t("contact.form.sent.title")}
+                </h4>
+                <p className="text-muted-foreground max-w-md mx-auto">
                   {t("contact.form.sent.subtitle")}
                 </p>
+
+                <div className="mt-6">
+                  <Button onClick={() => setIsSubmitted(false)} className="bg-gradient-to-r from-primary to-secondary text-white">
+                    {t("contact.form.send")}
+                  </Button>
+                </div>
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">

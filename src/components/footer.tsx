@@ -8,7 +8,7 @@ const socialLinks = [
   {
     name: "GitHub",
     icon: Github,
-    href: "https://github.com/shinezaya",
+    href: "https://github.com/shinezayam",
     color: "hover:text-gray-600"
   },
   {
@@ -26,13 +26,13 @@ const socialLinks = [
   {
     name: "Instagram",
     icon: Instagram,
-    href: "https://instagram.com/shinezaya",
+    href: "https://instagram.com/shinezayam",
     color: "hover:text-pink-500"
   },
   {
     name: "Email",
     icon: Mail,
-    href: "mailto:hello@shinezaya.com",
+    href: "mailto:shinezaya@gmail.com",
     color: "hover:text-red-500"
   }
 ]
@@ -122,9 +122,9 @@ export function Footer() {
           >
             <h4 className="text-lg font-semibold mb-4">{t("footer.contact")}</h4>
             <div className="space-y-2 text-muted-foreground">
-              <p>hello@shinezaya.com</p>
-              <p>+1 (555) 123-4567</p>
-              <p>San Francisco, CA</p>
+              <p>shinezayam@gmail.com</p>
+              <p>+976 88019223</p>
+              <p>Ulaanbaatar, Mongolia</p>
             </div>
           </motion.div>
         </div>

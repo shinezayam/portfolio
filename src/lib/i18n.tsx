@@ -31,21 +31,21 @@ const translations: Translations = {
   "ui.live": { en: "Live", mn: "Шууд үзэх" },
   "ui.clientSatisfaction": { en: "Client Satisfaction", mn: "Захиалагчийн сэтгэл ханамж" },
   "ui.projectsCompleted": { en: "Projects Completed", mn: "Дуусгасан төслүүд" },
-  "ui.yearsExperience": { en: "Years Experience", mn: "Ажлын жил" },
+  "ui.yearsExperience": { en: "Years Experience", mn: "Ажилласан жил" },
   "ui.happyClients": { en: "Happy Clients", mn: "Сэтгэл хангалуун захиалагчид" },
   "ui.averageRating": { en: "Average Rating", mn: "Дундаж үнэлгээ" },
 
   // Hero
   "hero.greeting": { en: "Hello, I'm", mn: "Сайн байна уу, би" },
   "hero.role": { en: "UI/UX Designer", mn: "UI/UX дизайнер" },
-  "hero.tagline": { en: "Crafting beautiful, intuitive digital experiences that users love", mn: "Хэрэглэгчдэд таалагдах гоёмсог, ойлгомжтой дижитал туршлагыг бүтээдэг" },
+  "hero.tagline": { en: "Crafting beautiful, intuitive digital experiences that users love", mn: "Гоёмсог, ойлгомжтой, хэрэглэгч төвтэй дижитал шийдэл урлана" },
   "hero.cta": { en: "View My Work", mn: "Миний бүтээлүүдийг үзэх" },
   "hero.scroll": { en: "Scroll to explore", mn: "Дэлгэрэнгүйг доош гүйлгэнэ үү" },
 
   // About
   "about.title": { en: "About", mn: "Миний тухай" },
   "about.heading": { en: "About Me", mn: "Миний тухай" },
-  "about.subtitle": { en: "Passionate UI/UX designer with a love for creating meaningful digital experiences", mn: "Утга учиртай дижитал туршлага бүтээхэд дуртай, сэтгэлтэй UI/UX дизайнер" },
+  "about.subtitle": { en: "Passionate UI/UX designer with a love for creating meaningful digital experiences", mn: "Хэрэглэгчдэд таалагдах утга учиртай дижитал туршлага бүтээх хүсэлтэй UI/UX дизайнер" },
   "about.story.title": { en: "My Story", mn: "Миний түүх" },
   "about.story.p1": { en: "I'm Shinezaya Myagmar, a passionate UI/UX designer with over 3 years of experience creating digital experiences that users love. My journey began with a fascination for how people interact with technology and a desire to make those interactions more intuitive and enjoyable.", mn: "Би Shinezaya Myagmar. 3+ жилийн туршлагатай UI/UX дизайнер. Хүмүүс технологитой хэрхэн харилцдаг нь надад сонирхолтой санагдсанаар миний аялал эхэлсэн бөгөөд тэдгээр харилцааг илүү ойлгомжтой, таатай болгохыг зорьдог." },
   "about.story.p2": { en: "I believe that great design is invisible - it guides users seamlessly through their journey while solving real problems. Every project I work on is an opportunity to learn, grow, and create something meaningful.", mn: "Сайн дизайн үл анзаарагдам байх ёстой гэж би итгэдэг — энэ нь хэрэглэгчийг аяллын туршид саадгүй чиглүүлж, бодит асуудлыг шийддэг. Тухайн төсөл бүр нь суралцах, хөгжих, утга учиртай зүйл бүтээх боломж юм." },
@@ -61,7 +61,7 @@ const translations: Translations = {
   "about.philosophy.efficient": { en: "Efficient", mn: "Үр ашигтай" },
   "about.philosophy.efficient.desc": { en: "Streamlined processes that deliver results quickly and effectively.", mn: "Хурдан, үр дүнтэй хүргэх нягтруулсан үйл явц." },
   "about.exp.title": { en: "Experience Highlights", mn: "Туршлагын онцлох зүйлс" },
-  "about.exp.projects.desc": { en: "From mobile apps to web platforms, each project has been a unique challenge", mn: "Гар утаснаас вэб платформ хүртэл, төсөл бүр өөрийн гэсэн сорилттой байсан" },
+  "about.exp.projects.desc": { en: "From mobile apps to web platforms, each project has been a unique challenge", mn: "Гар утасны аппаас вэб платформ хүртэл, төсөл бүр өөрийн гэсэн сорилттой байсан" },
   "about.exp.clients.desc": { en: "Long-term relationships built on trust, quality, and results", mn: "Итгэл, чанар, үр дүнд суурилсан урт хугацааны харилцаа" },
   "about.exp.years.desc": { en: "Continuous learning and growth in the ever-evolving design landscape", mn: "Тасралтгүй өөрчлөгдөж буй дизайны ертөнцөд тасралтгүй суралцаж, өсч хөгжих" },
 
@@ -74,25 +74,25 @@ const translations: Translations = {
 
   // Testimonials
   "testimonials.title": { en: "Client Testimonials", mn: "Харилцагчдын сэтгэгдэл" },
-  "testimonials.subtitle": { en: "Hear what my clients have to say about working together and the results we've achieved", mn: "Намайгтай хамтран ажилласан туршлага, бидний бүтээсэн үр дүнгийн талаар харилцагчид юу хэлж байгааг сонсоорой" },
-  "testimonials.stats.client.desc": { en: "Every client has been satisfied with the final deliverables", mn: "Бүх захиалагч эцсийн үр дүнгээр сэтгэл хангалуун байсан" },
+  "testimonials.subtitle": { en: "Hear what my clients have to say about working together and the results we've achieved", mn: "Надтай хамтран ажилласан туршлага, бидний бүтээсэн үр дүнгийн талаар харилцагчид юу хэлж байгаатай танилцаарай" },
+  "testimonials.stats.client.desc": { en: "Every client has been satisfied with the final deliverables", mn: "Бүх захиалагч эцсийн үр дүндээ сэтгэл хангалуун байсан" },
   "testimonials.stats.clients.desc": { en: "Long-term relationships built on trust and quality", mn: "Итгэл, чанарт суурилсан урт хугацааны харилцаа" },
   "testimonials.stats.rating.desc": { en: "Consistently receiving 5-star reviews from clients", mn: "Захиалагчдаас тогтмол 5 одтой үнэлгээ авдаг" },
 
   // Contact
   "contact.title": { en: "Let's Connect", mn: "Холбогдъё" },
-  "contact.subtitle": { en: "Ready to bring your ideas to life? I'd love to hear about your project and discuss how we can work together", mn: "Таны санааг бодит болгоход бэлэн байна уу? Төслийнхөө талаар ярилцъя." },
+  "contact.subtitle": { en: "Ready to bring your ideas to life? I'd love to hear about your project and discuss how we can work together", mn: "Та санаагаа бодит болгоход бэлэн үү? Төслийнхөө талаар ярилцъя." },
   "contact.getInTouch": { en: "Get in Touch", mn: "Холбоо барих" },
-  "contact.getInTouch.desc": { en: "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Let's create something amazing together!", mn: "Шинэ төсөл, бүтээлч санаа, эсвэл хамтран ажиллах боломжийн талаар үргэлж нээлттэй. Хамтдаа гайхалтай зүйлийг бүтээцгээе!" },
+  "contact.getInTouch.desc": { en: "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Let's create something amazing together!", mn: "Шинэ төсөл, бүтээлч санаа, эсвэл хамтран ажиллах боломжийн талаар ярилцахад үргэлж нээлттэй. Хамтдаа гайхалтай зүйлийг бүтээцгээе!" },
   "contact.info.email": { en: "Email", mn: "И-мэйл" },
   "contact.info.phone": { en: "Phone", mn: "Утас" },
   "contact.info.location": { en: "Location", mn: "Байршил" },
-  "contact.offer.title": { en: "What I Offer", mn: "Би юу санал болгодог вэ" },
+  "contact.offer.title": { en: "What I Offer", mn: "Би юу санал болгодог вэ?" },
   "contact.offer.uiux": { en: "UI/UX Design for Web & Mobile", mn: "Вэб ба мобайлын UI/UX дизайн" },
   "contact.offer.research": { en: "User Research & Testing", mn: "Хэрэглэгчийн судалгаа ба тест" },
-  "contact.offer.proto": { en: "Prototyping & Wireframing", mn: "Прототипчлол ба wireframe" },
+  "contact.offer.proto": { en: "Prototyping & Wireframing", mn: "Прототип ба wireframe" },
   "contact.offer.systems": { en: "Design Systems & Branding", mn: "Дизайн систем ба брэндинг" },
-  "contact.offer.consult": { en: "Design Consultation", mn: "Дизайн зөвлөх үйлчилгээ" },
+  "contact.offer.consult": { en: "Design Consultation", mn: "Дизайны зөвлөх үйлчилгээ" },
   "contact.form.sendMessage": { en: "Send a Message", mn: "Захиа илгээх" },
   "contact.form.name": { en: "Name *", mn: "Нэр *" },
   "contact.form.name.ph": { en: "Your full name", mn: "Таны бүтэн нэр" },
@@ -102,7 +102,7 @@ const translations: Translations = {
   "contact.form.message.ph": { en: "Tell me about your project...", mn: "Төслийнхөө талаар бичнэ үү..." },
   "contact.form.sending": { en: "Sending...", mn: "Илгээж байна..." },
   "contact.form.sent.title": { en: "Message Sent!", mn: "Захиа илгээгдлээ!" },
-  "contact.form.sent.subtitle": { en: "Thank you for reaching out. I'll get back to you within 24 hours.", mn: "Холбогдсонд баярлалаа. 24 цагийн дотор буцаж холбогдоно." },
+  "contact.form.sent.subtitle": { en: "Thank you for reaching out. I'll get back to you within 24 hours.", mn: "Холбогдсонд баярлалаа. 24 цагийн дотор буцаж холбогдох болно." },
   "contact.form.send": { en: "Send Message", mn: "Захиа илгээх" },
 
   // Footer
